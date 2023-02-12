@@ -4,9 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DocumentiDocumentitDDoDocumeDocumentiDocumentitDDoDocumetlettlet</title>
+    <title>Document</title>
 </head>
 <body>
-    
+<?php
+$discs = "";
+$Deez = lezdoit;
+
+echo "goddamn" , $Deez;
+echo "<h1>FUCK UUUU</h1>"
+
+
+
+?>
+
 </body>
 </html>
