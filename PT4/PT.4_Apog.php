@@ -8,88 +8,85 @@
     <style>
       .instruction{color:#d41919}
       .bg-color {background-color: lightblue;}
+      td {
+        text-align: center;
+        color : #d41919;
+        }
+      table {margin: auto;}
+      th {
+        text-align: center;
+        color :#164754;
+        }
     </style>
         <title>CD Store</title>
 </head>
 <body class="bg-color">
-   
+  
+<?php
+echo "<center><h1>CD Store ni Apog</h1></center>";
+echo "<table border='1' width='80%'>"
+    . "<tr>"
+    . "<th>CD's Bought</th>"
+    . "<th>Discount</th>"
+    . "<th>Partial Amount</th>"
+    . "<th>Total Amount</th>"
+    . "</tr>";
 
-   <?php
-    echo '<div class="instruction">';
-    echo "<p>If the Customer Bought 120 CDs or More</p>";
-    echo "</div>";
-  $cdBought = 120000;
+ $Cdbought = 15;
+ $price = 20;
+    
+      if($Cdbought >= 120){
+      $totalAmount = $Cdbought * $price;
+      $discount =  $totalAmount * 0.10;
+      $discountedAmount = $totalAmount - $discount;
+      
+      echo "<tr>"
+      . "<td>" . $Cdbought  . "</td>"
+      . "<td>" . $discount . "</td>"
+      . "<td>" . number_format ($totalAmount)  . "</td>"
+      . "<td>" . number_format ($discountedAmount) . "</td>"
+       . "</tr>";
+    }
+    elseif($Cdbought >= 50){
+      $totalAmount = $Cdbought * $price;
+      $discount =  $totalAmount * 0.05;
+      $discountedAmount = $totalAmount - $discount;
+      
+      echo "<tr>"
+      . "<td>" . $Cdbought . "</td>"
+      . "<td>" . $discount . "</td>"
+      . "<td>" . number_format ($totalAmount) .  "</td>"
+       . "<td>" . number_format ($discountedAmount) . "</td>"
+      . "</tr>";
+    }
+    
+    elseif($Cdbought >= 15){
+      $totalAmount = $Cdbought * $price;
+      $discount =  $totalAmount * 0.01;
+      $discountedAmount = $totalAmount - $discount;
+      
+      echo "<tr>"
+      . "<td>" . $Cdbought ."</td>"
+      . "<td>" . $discount . "</td>"
+      . "<td>" . number_format ($totalAmount) . "</td>"
+      . "<td>" . number_format ($discountedAmount) .  "</td>"
+      . "</tr>";
+    }
+    
+    else{
+      $totalAmount = $Cdbought * $price;
+      $discount =  $totalAmount * 0;
+      $discountedAmount = $totalAmount - $discount;
+      echo "<tr>"
+      . "<td>" .$Cdbought ."</td>"
+      . "<td>" . $discount ." </td>"
+      . "<td>" . number_format ($totalAmount) ."</td>"
+      . "<td>" .number_format ($discountedAmount). "</td>"
+      . "</tr>";
+    }
+    echo "</table>";
 
-    if($cdBought >=150){
-        echo "<p><b>Congratulations!!</b>, You've reached the 10% Discount for the CD you bought, Thank you for your Purchase.</p>";
-      } 
-        elseif ($cdBought >=50){
-        echo "<p>We at <i><b>Apog's Collection</b></i> Appreciate your Purchase that can be worth a discounted price for <strong>5%,</strong></p> Thank you for your Purchase.";    
-    } 
-        elseif ($cdBought >=15){
-            echo "<p>Thank you for the Purchase at <i><b>Apog's Collection</b></i>, Here's a Special <b>1%</b> Discount for You</p> ";
-        }
-   else{
-    echo "<p>Thank you For your Purchase, Dear Customer.</p> ";  
-        } 
-  
-  
-  echo "<br>";
-  echo '<div class="instruction">';
-  echo "<p>If the Customer bought 50 CDs or more:</div></p>"; 
-    $cdBought2 = 60;
- 
-    if($cdBought2 >=150){
-        echo "<p><b>Congratulations!!</b>, You've reached the 10% Discount for the CD you bought, Thank you for your Purchase.</p>";
-      } 
-        elseif ($cdBought2 >=50){
-        
-            echo "<p>We at <i><b>Apog's Collection</b></i> Appreciate your Purchase that can be worth a discounted price for <strong>5%,</strong> Thank you for your Purchase.</p>";    
-    } 
-        elseif ($cdBought2 >=15){
-            echo "<p>Thank you for the Purchase at <i><b>Apog's Collection</b></i>, Here's a Special <b>1%</b> Discount for You</p> ";
-        }
-   else{
-    echo "<p>Thank you For your Purchase, Dear Customer.</p> ";  
-        } 
-  
-echo "<br>";
-echo '<div class="instruction">';
-echo "<p>If the Customer bought 15 CDs or more:</div></p>"; 
-    $cdBought3 = 20;
-       
-            if($cdBought3 >=150){
-              echo "<p><b>Congratulations!!</b>, You've reached the 10% Discount for the CD you bought, Thank you for your Purchase.</p>";
-            } 
-              elseif ($cdBought3 >=50){
-              
-                  echo "<p>We at <i><b>Apog's Collection</b></i> Appreciate your Purchase that can be worth a discounted price for <strong>5%,</strong> Thank you for your Purchase.</p>";    
-          } 
-              elseif ($cdBought3 >=15){
-                  echo "<p>Thank you for the Purchase at <i><b>Apog's Collection</b></i>, Here's a Special <b>1%</b> Discount for You</p> ";
-              }
-         else{
-          echo "<p>Thank you For your Purchase, Dear Customer.</p> ";  
-              } 
-echo "<br>";
-echo '<div class="instruction">';
-echo "<p>If the Customer bought 14 CDs or Less:</div></p>"; 
-    $cdBought4 = 10;
-       
-            if($cdBought4 >=150){
-              echo "<p><b>Congratulations!!</b>, You've reached the 10% Discount for the CD you bought, Thank you for your Purchase.</p>";
-            } 
-              elseif ($cdBought4 >=50){
-              
-                  echo "<p>We at <i><b>Apog's Collection</b></i> Appreciate your Purchase that can be worth a discounted price for <strong>5%,</strong></p> Thank you for your Purchase.";    
-          } 
-              elseif ($cdBought4 >=15){
-                  echo "<p>Thank you for the Purchase at <i><b>Apog's Collection</b></i>, Here's a Special <b>1%</b> Discount for You</p> ";
-              }
-         else{
-          echo "<p>Thank you For your Purchase, Dear Customer.</p> ";  
-              } 
-   
-  
-  ?>
- 
+
+?>
+</body>
+</html>
