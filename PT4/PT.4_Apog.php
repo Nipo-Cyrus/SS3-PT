@@ -32,8 +32,8 @@ echo "<table border='1' width='80%'>"
     . "<th>Total Amount</th>"
     . "</tr>";
 
- $Cdbought = 15;
- $price = 20;
+ $Cdbought = 120;
+ $price = 10;
     
       if($Cdbought >= 120){
       $totalAmount = $Cdbought * $price;
@@ -47,7 +47,7 @@ echo "<table border='1' width='80%'>"
       . "<td>" . number_format ($discountedAmount) . "</td>"
        . "</tr>";
     }
-    elseif($Cdbought >= 50){
+    elseif($Cdbought >= 50 && $Cdbought <= 119){
       $totalAmount = $Cdbought * $price;
       $discount =  $totalAmount * 0.05;
       $discountedAmount = $totalAmount - $discount;
@@ -58,9 +58,8 @@ echo "<table border='1' width='80%'>"
       . "<td>" . number_format ($totalAmount) .  "</td>"
        . "<td>" . number_format ($discountedAmount) . "</td>"
       . "</tr>";
-    }
-    
-    elseif($Cdbought >= 15){
+    } 
+    elseif($Cdbought >= 15 && $Cdbought <= 49){
       $totalAmount = $Cdbought * $price;
       $discount =  $totalAmount * 0.01;
       $discountedAmount = $totalAmount - $discount;
@@ -73,7 +72,7 @@ echo "<table border='1' width='80%'>"
       . "</tr>";
     }
     
-    else{
+    elseif($Cdbought <= 14){
       $totalAmount = $Cdbought * $price;
       $discount =  $totalAmount * 0;
       $discountedAmount = $totalAmount - $discount;
