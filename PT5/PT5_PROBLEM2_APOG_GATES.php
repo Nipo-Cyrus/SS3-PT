@@ -20,8 +20,6 @@ for ($i = 1; $subtotal <= 100; $i++) {
         echo "Previous subtotal: " . ($subtotal - $value) ;
     }
 }
-echo "<br>";
-echo "<br>";
 ?>
 
 </body>
