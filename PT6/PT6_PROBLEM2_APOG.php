@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Input my Signature icon -->
     <link rel="icon" href="https://img.utdstc.com/icon/163/844/163844fed46d7b335d8a5eac8a94e0203b544ffb44f8934bd94506635e58d4c8:200" type="image/x-icon">
     <!-- css stylesheet -->
     <style = "text/css">
@@ -94,13 +95,15 @@
         </tr>
     </Table>
     </form>
+    <!-- End the Form Data -->
 
 <?php
-    // Display error if True, 
+    // Display errors
     ini_set("display_errors", 1);
     
     // Create a if statement to check if the submit button is clicked
     if (isset($_POST['submit_login'])) {
+       
         // Get the Input Values of the Letter Grades
         $numA = $_POST['grade_A'];
         $numB = $_POST['grade_B'];
