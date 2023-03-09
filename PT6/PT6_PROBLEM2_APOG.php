@@ -50,7 +50,7 @@
         .table4 {
             background-color: #f50707;
             width: 50%;
-            height: 60%;
+            height: auto;
             border: absolute;
         }
     body {
@@ -64,7 +64,7 @@
 </head>
 <body>
    <!-- Create a Form data -->
-    <form action="" method="post">
+    <form action="" method="POST">
     <!-- Create a Table To Show the Gatespace of the Website -->
     <Table align=center class ="table1">
         <tr>
@@ -149,7 +149,7 @@
       // Create a Graph Table
        echo "<center>";
         echo "<br>";
-        echo "<Table width ='90%' border='0' class='table3'>";
+        echo "<Table width ='90%' border='1' class='table3'>";
         echo '<tr>
               <th>Total Grades:' . $total_Grades . '</th>'
               . '<th>&nbsp;</th>'
@@ -158,27 +158,27 @@
         
               echo '<tr><td class="cent">A = ' . $numA . '</td>'
               . '<td class ="kantotan">' . $percent_A . '%</td>'
-              . '<td class="bgA" style="width:' .$percent_A . 'px";'; 
+              . '<td><p class="bgA" style=" width:' .$percent_A . '%;">&nbsp;</p></td>'; 
                 echo '</tr>';
             
                 echo '<tr><td class="cent">B = ' . $numB . '</td>'
                 . '<td class ="kantotan">' . $percent_B . '%</td>'
-                . '<td class="bgB" style="background-color:#eb4034; width:' .$percent_B . 'px;"';
+                . '<td><p class="bgB" style=" width:' .$percent_B . '%;">&nbsp;</p></td>';
                 echo '</tr>';
 
                 echo '<tr><td class="cent">C = ' . $numC . '</td>'
                 . '<td class ="kantotan">' . $percent_C . '%</td>'
-                . '<td class="bgC" style="width:' .$percent_C . '%"';
+                . '<td><p class="bgC" style=" width:' .$percent_C . '%;">&nbsp;</p></td>';
                 echo '</tr>';
 
                 echo '<tr><td class="cent">D = ' . $numD . '</td>'
                 . '<td class ="kantotan">' . $percent_D . '%</td>'
-                . '<td class="bgD" style="width:' .$percent_D . '%"';
+                .'<td><p class="bgD" style=" width:' .$percent_D . '%;">&nbsp;</p></td>';
                 echo '</tr>';
 
                 echo '<tr><td class="cent">F = ' . $numF . '</td>'
                 . '<td class ="kantotan">' . $percent_F . '%</td>'
-                . '<td class="bgF" style="width:' .$percent_F . '%"';
+                . '<td><p class="bgF" style=" width:' .$percent_F . '%;">&nbsp;</p></td>';
                 echo '</tr>';
                 echo "</Table>";
                 echo "</center>";
@@ -190,8 +190,7 @@
             echo "<Table width ='40%' border='0' class='table4'>";
             echo '<tr>
                   <th>ERROR: Please Fill up the Form</th>'
-                  . '<th>&nbsp;</th>'
-                  . '<th></th>'
+                  . '<th>&nbsp;</th>'   
                   . '</tr>' ;
             }
         }           
