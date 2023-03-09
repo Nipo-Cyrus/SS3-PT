@@ -149,7 +149,7 @@
       // Create a Graph Table
        echo "<center>";
         echo "<br>";
-        echo "<Table width ='90%' border='1' class='table3'>";
+        echo "<Table width ='90%' border='0' class='table3'>";
         echo '<tr>
               <th>Total Grades:' . $total_Grades . '</th>'
               . '<th>&nbsp;</th>'
