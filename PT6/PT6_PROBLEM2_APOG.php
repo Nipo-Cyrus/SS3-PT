@@ -45,6 +45,13 @@
             background-color: #acc43f;
             width: 50%;
             height: 60%;
+            border: absolute;
+        }
+        .table4 {
+            background-color: #f50707;
+            width: 50%;
+            height: 60%;
+            border: absolute;
         }
     body {
         background-color: lightblue;
@@ -137,7 +144,9 @@
         // or the user will handle the error
       }
     
-     // Create a Graph Table
+     
+     
+      // Create a Graph Table
        echo "<center>";
         echo "<br>";
         echo "<Table width ='90%' border='0' class='table3'>";
@@ -178,7 +187,7 @@
         if (empty($numA) || empty($numB) || empty($numC) || empty($numD) || empty($numF)) {
             echo "<center>";
             echo "<br>";
-            echo "<Table width ='40%' border='0'>";
+            echo "<Table width ='40%' border='0' class='table4'>";
             echo '<tr>
                   <th>ERROR: Please Fill up the Form</th>'
                   . '<th>&nbsp;</th>'
