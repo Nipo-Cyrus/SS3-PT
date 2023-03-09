@@ -81,23 +81,23 @@
                 <Table class= "table2" align=center >
                     <tr>
                         <td><label for="grade_A">How many is A: </label></td>
-                        <td align=left><input type="text" name="grade_A" id="grade_A"> </td>
+                        <td align=left><input type="text" name="grade_A" id="grade_A" required> </td>
                     </tr>
                     <tr>
                         <td><label for="grade_B">How many is B: </label></td>
-                        <td  align=left><input type="text" name="grade_B" id="grade_B"></td>
+                        <td  align=left><input type="text" name="grade_B" id="grade_B" required></td>
                     </tr>
                     <tr>
                         <td><label for="grade_C">How many is C: </label></td>
-                        <td  align=left><input type="text" name="grade_C" id="grade_C"></td>
+                        <td  align=left><input type="text" name="grade_C" id="grade_C" required></td>
                     </tr>
                     <tr>
                         <td><label for="grade_D">How many is D: </label></td>
-                        <td  align=left><input type="text" name="grade_D" id="grade_D"></td>
+                        <td  align=left><input type="text" name="grade_D" id="grade_D" required></td>
                     </tr>
                     <tr>
                         <td><label for="grade_F">How many is F: </label></td>
-                        <td  align=left><input type="text" name="grade_F" id="grade_F"></td>
+                        <td  align=left><input type="text" name="grade_F" id="grade_F" required></td>
                     </tr>
                     <tr>
                         <td>&nbsp;</td>
