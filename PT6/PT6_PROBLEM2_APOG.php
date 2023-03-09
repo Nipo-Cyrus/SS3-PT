@@ -37,9 +37,12 @@
         }
         .cent {
             text-align: center;
+            height: 50%;
+            width: 30%;
         }
         .kantotan {
             text-align: right;
+            width: 10%;
         }
         .table3 {
             background-color: #acc43f;
@@ -51,10 +54,15 @@
             background-color: #f50707;
             width: 50%;
             height: auto;
-            border: absolute;
-        }
+            border: absolute;  }
+        
+      
     body {
         background-color: lightblue;
+        }
+        * {
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 14px;
         }
         
     </style>
