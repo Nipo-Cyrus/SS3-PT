@@ -28,7 +28,7 @@
         border: absolute;
     }
     .table4{
-        width: 50%;
+        width: 100%;
         background-color: red;
     
     }
@@ -65,7 +65,7 @@
    <form action="" method="post">
     <table class ="table1" border="0" align= "center" >
         <tr align="center">
-            <th  class="td1" colspan="2">Investment Calculator</th>
+            <th  class="td1" colspan="2"><h2>Annual Investment Calculator </h2></th>
         </tr> 
             <tr>
                 <td colspan="2" align="center">
