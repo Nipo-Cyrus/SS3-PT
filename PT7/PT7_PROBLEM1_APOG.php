@@ -71,12 +71,12 @@
                 <td colspan="2" align="center">
                   <table border="0" class="table2" >
                     <tr>
-                <td  align="right">Initial Investment:</td>
+                <td  align="right">Investment:</td>
                 <td><input type="text" name="investment" id="investment"></td>
             </tr>
             <tr>
-                <td>Annual Compund Interest (in Percent):</td>
-                <td><input type="text" name="AnnualInt" id="AnnualInt"></td>
+                <td>Annual Compund Interest:</td>
+                <td><input type="text" name="AnnualInt" id="AnnualInt"> (<b>%</b>) </td>
             </tr>
             <tr>
                 <td>&nbsp;</td>
@@ -121,7 +121,7 @@ if (isset($_POST{'calculate'})){
         echo '<td align= "center">' . $i . '</td>';
         // remove the unecessart zeros from the end of the number
         // format the number to 5 decimal places
-        echo '<td align="left">' . rtrim(number_format($investment, 5), '0.') . '</td>';
+        echo '<td align="left">'. '$' . rtrim(number_format($investment, 5), '0.') . '</td>';
         echo '</tr>';
         $i++;
     } while ($i <= 10);
