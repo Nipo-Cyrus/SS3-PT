@@ -46,7 +46,13 @@
     display: inline-block;
     font-size: 16px;
     }
-    
+    .bj {
+        background-color: #c73a40;
+        color: white;
+    }
+    .text {
+        color:#b87333;
+    }
     th {
         height: 30px;
     }
@@ -94,40 +100,41 @@ if (isset($_POST{'calculate'})){
     // Retrieve the form data by using the element's name attributes value as key
     $investment = $_POST['investment'];
     $Percentage = $_POST['AnnualInt'];
-    
     $investment = intval($investment);
     $Percentage = intval($Percentage);
+    
     //Connvert $AnnualInt from percentage to decimal
     $AnnualInt = $Percentage / 100;
 
-// Create an if statement that shows the form is empty
+    // Create an if statement that shows the form is empty
     if (empty($investment) || empty($Percentage)) { 
         echo '<center>';
         echo '<br>';echo '<br>';
         echo '<table class= "table4" ><tr><td><p style="color:white;"><i>Please fill out the form completely.</i></p><td><tr><table>';
     } else {
+
     // Display the result
-   
     echo '<br>';echo '<br>';
     echo '<table border="1" class= "table3" align ="center"c>';
     echo '<tr>'
          . '<th>Year</th>'
          . '<th>Initial Investment</th>'
          . '</tr>'; 
-        //  Create the loop
+    //  Create the loop
          $i = 1;
     do { $investment = $investment + ($investment * $AnnualInt);
         echo '<tr>';
         echo '<td align= "center">' . $i . '</td>';
-        // remove the unecessart zeros from the end of the number
-        // format the number to 5 decimal places
+    // remove the unecessart zeros from the end of the number
+    // format the number to 5 decimal places
         echo '<td align="left">'. '$' . rtrim(number_format($investment, 5), '0.') . '</td>';
         echo '</tr>';
         $i++;
     } while ($i <= 10);
-
-    echo '</table>';
-    
+    echo '</table>';   
+    echo '<br>';echo '<br>';
+    echo '<h2 align=center class="text">Therefore, the Annual Interest that you will have is: <i class="bj">$' . rtrim(number_format($investment, 5), '0.' . '</i></h2>');
+    echo '</h2>';
    }
 } 
 ?>
