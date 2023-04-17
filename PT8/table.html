@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style type="text/css">
+    /* Reset default styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Style the table */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 5px;
+  font-size: 18px;
+  line-height: 1.5;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Style table headers */
+th {
+  background-color: #f8f8f8;
+  font-weight: bold;
+  text-align: left;
+  padding: 20px;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-bottom: 1px solid #ccc;
+}
+
+/* Style table rows */
+tr {
+  border-bottom: 1px solid #ccc;
+}
+
+/* Style the first cell in each row */
+td:first-child {
+  font-weight: bold;
+  padding: 20px;
+}
+
+/* Style checkboxes and number inputs */
+input[type="checkbox"],
+input[type="number"] {
+  margin: 0;
+  vertical-align: middle;
+}
+
+/* Style the what would you like to do text */
+td[align="right"] {
+  font-weight: bold;
+  padding: 20px;
+  border-top: 1px solid #ccc;
+  text-align: right;
+}
+
+/* Style the dropdown choices */
+select {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  width: 100%;
+  font-size: 18px;
+  margin: 20px 0;
+  background-color: #f8f8f8;
+  color: #333;
+  border: 1px solid #ccc;
+  appearance: none;
+}
+
+/* Style the button */
+button[type="submit"] {
+  background-color: #6fbd80;
+  border: none;
+  color: white;
+  padding: 20px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 30px 0;
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* Style button hover */
+button[type="submit"]:hover {
+  background-color: #4aa964;
+}
+
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <h1>Wally Bayola's Cafe</h1>
+    <hr>
+    <form action="" method="post">
+    <table border="0">
+        <tr>
+            <th>Items</th>
+            <th>Price</th>
+            <th>Quantity</th>
+        </tr>
+        <tr>
+            <label>
+                <td><input type="checkbox" name="order[]" value="Cappucino" id=""> Cappucino</td>
+                <td>$2.00</td>
+                <td><input type="number" name="quantity[]" value="" min="0" id=""></td>
+            </label>
+        </tr>
+        <tr>
+            <label>
+                <td><input type="checkbox" name="order[]" value="Ëspresso" id="">Espresso</td>
+                <td>$2.25</td>
+                <td><input type="number" name="quantity[]" value="" min="0" id=""></td>
+            </label>
+        </tr>
+        <tr>
+            <label>
+                <td><input type="checkbox" name="order[]" value="Latte"  id="">Latte</td>
+                <td>$1.75</td>
+                <td><input type="number" name="quantity[]" value="" min="0" id=""></td>
+            </label>
+        </tr>
+        <tr>
+            <label>
+                <td><input type="checkbox" name="order[]" value="Iced Cappucino" id=""> Iced Cappucino</td>
+                <td>$2.50</td>
+                <td><input type="number" name="quantity[]" value="" min="0" id=""></td>
+            </label>
+        </tr>
+        <tr>
+            <label>
+                <td><input type="checkbox" name="order[]" value="Iced Latte" id="">Iced Latte</td>
+                <td>$2.50</td>
+                <td><input type="number" name="quantity[]" value="" id=""></td>
+            </label>
+        </tr>
+        <tr>
+            <td align="right">What would you like to do?</td>
+            <td colspan="2" align="center">
+                <label>
+                    <select name="dine-in-or-take-out" required>
+                        <option disabled selected value> -- select an option -- </option>
+                        <option name="dine-in" value="Dine-in">Dine-in</option >
+                        <option name="take-out" value="Take-out">Take-out</option>
+                    </select>
+                </label>
+            </td>
+        </tr>
+
+        <tr>
+            <td>&nbsp;</td>
+            <td colspan="2" align="center"><button type="submit">Calculate Total</button></td>
+        </tr>
+    </table>
+</form>
+
+
+
+</body>
+</html>
