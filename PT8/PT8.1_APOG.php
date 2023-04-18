@@ -115,7 +115,6 @@ function total($lumber, $concrete, $drywall, $paint, $misc){
         body,td,th {
 	font-family: Arial, Helvetica, sans-serif;
 	
-
 	font-size: 12px;
                     }
         body {
