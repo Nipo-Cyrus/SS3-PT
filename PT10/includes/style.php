@@ -5,7 +5,7 @@
     cursor: pointer;
     border-radius: 5px;
     background-color: #81849f;
-    margin-top: -700px;
+    margin-top: -600px;
   }
   #user {
    padding: 14px 13px;

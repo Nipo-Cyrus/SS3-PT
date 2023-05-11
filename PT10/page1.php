@@ -193,6 +193,14 @@ function calculateTotalAmount() {
     return null;
   }
   
+  function getDineInOrTakeOut() {
+    if (isset($_POST["dine-in-or-take-out"])) {
+      return $_POST["dine-in-or-take-out"];
+    } else {
+      return null;  
+    }
+
+  }
   $totalAmount = 0;
   for ($i = 0; $i < count($selectedOrders); $i++) {
     $selectedOrder = $selectedOrders[$i];
@@ -200,7 +208,7 @@ function calculateTotalAmount() {
     $price = PRICE_LIST[$selectedOrder];
     $totalAmount += $quantity * $price;
   }
-  
+  $dineInOrTakeOut = getDineInOrTakeOut();
   if ($dineInOrTakeOut === "Take-out") {
     $tax = $totalAmount * 0.12;
     $totalAmount += $tax;
@@ -222,6 +230,17 @@ function generateReceipt($selectedOrders, $quantities , $dineInOrTakeOut) {
   }
   return $receipt;
 }
+function removeButton() {
+  if (isset($_POST["remove"])) {
+    //remove the clicked item from the cart}
+    
+
+   
+  }
+  
+  return number_format($totalAmount, 2);
+}
+
 function Ordertype($dineInOrTakeOut) {
   if (isset($_POST["dine-in-or-take-out"])) {
     $dineInOrTakeOut = $_POST["dine-in-or-take-out"];

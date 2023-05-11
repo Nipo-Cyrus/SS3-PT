@@ -260,7 +260,7 @@ function getDineInOrTakeOut() {
   if (isset($_POST["dine-in-or-take-out"])) {
     return $_POST["dine-in-or-take-out"];
   } else {
-    return null;
+    return null;  
   }
 }
 
