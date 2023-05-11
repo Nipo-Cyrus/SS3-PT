@@ -37,7 +37,6 @@
   echo '<form method="" action="page1.php">
   <button type="tp" id = "order">Order Again?</button>
 </form>'
-
   ?>
   <?php
   session_unset();
