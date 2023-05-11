@@ -63,7 +63,7 @@
                 echo '<br<br><h2 class="text"><i>Please Input your Username<i></h2>';
             }
             else {
-            echo "<script> window.location.href='page1.php'</script>";
+            echo "<script> window.location.href='index.php'</script>";
         }
     }
    
